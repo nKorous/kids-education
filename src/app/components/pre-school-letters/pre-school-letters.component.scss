@@ -5,13 +5,27 @@
   height: 100%;
 
   .question-card {
-    height: 400px;
+    height: 250px;
     width: 400px;
   }
 
+  .shown-letter {
+    font-size: 72px;
+    text-align: center;
+  }
+
   .answer {
+    text-align: center;
+    margin-top: 25px;
+
     input {
       text-transform: uppercase;
+    }
+  }
+
+  mat-card-footer {
+    button {
+      text-align: right;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -11,6 +11,8 @@ export class PreSchoolLettersComponent {
   currentLetter: string = ''
   currentAnswer: string = ''
   answerCorrect: boolean = false
+
+  @ViewChild('typedAnswer', { static: false}) typedAnswer: ElementRef;
 
   constructor(
     private dataService: DataService
@@ -26,6 +28,9 @@ export class PreSchoolLettersComponent {
 
   getRandomLetter() {
     this.currentLetter = this.letters[this.rand()]
+    if(this.typedAnswer) {
+      this.typedAnswer.nativeElement.innerHTML = null
+    }
   }
 
   checkAnswer() {

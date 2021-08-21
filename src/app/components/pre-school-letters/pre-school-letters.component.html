@@ -9,7 +9,10 @@
       {{ currentLetter}}
     </div>
     <div class="answer">
-      <input type="text" placeholder="letter" (keyup)='onKeyup($event)'>
+      <input id="typedAnswer" type="text" placeholder="letter" (keyup)='onKeyup($event)'>
     </div>
   </mat-card-content>
+  <mat-card-footer>
+    <button mat-button mat-raised-button color="primary" (click)="getRandomLetter()">Get Next Letter</button>
+  </mat-card-footer>
 </mat-card>
