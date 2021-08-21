@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button matButton mat-icon-button [matMenuTriggerFor]='menu'><mat-icon>menu</mat-icon></button>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/preSchoolHome" routerLinkActive="true">
+    <span>Pre-school</span>
+  </button>
+  <button mat-menu-item (click)="navToRoute('second')">
+    <span>2nd Grade</span>
+  </button>
+  <button mat-menu-item (click)="navToRoute('fourth')">
+    <span>4th Grade</span>
+  </button>
+</mat-menu>
