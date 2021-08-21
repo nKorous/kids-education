@@ -1,1 +1,15 @@
-<p>pre-school-letters works!</p>
+<mat-card class="question-card">
+  <mat-card-header>
+    <mat-card-title>
+      Match the letter shown below!
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="shown-letter">
+      {{ currentLetter}}
+    </div>
+    <div class="answer">
+      <input type="text" placeholder="letter" (keyup)='onKeyup($event)'>
+    </div>
+  </mat-card-content>
+</mat-card>

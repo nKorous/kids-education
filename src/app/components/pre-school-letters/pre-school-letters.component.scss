@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .question-card {
+    height: 400px;
+    width: 400px;
+  }
+
+  .answer {
+    input {
+      text-transform: uppercase;
+    }
+  }
+}
